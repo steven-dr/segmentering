@@ -32,11 +32,11 @@ data["segment"] = kmeans.predict(data)
 ```
 
 ```python
-replace_dict_segment = {0: "De Urbane",
-                        1: "De Udfordrende",
-                        2: "De Sammenholdende",
-                        3: "De Velgørende",
-                        4: "De Beskyttende"}
+replace_dict_segment = {0: "Selvudviklerne",
+                        1: "Individualisterne",
+                        2: "Pragmatikerne",
+                        3: "Idealisterne",
+                        4: "Beskytterne"}
 
 data["segment"] = data["segment"].replace(replace_dict_segment)
 ```
