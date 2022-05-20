@@ -5,7 +5,6 @@
 import pickle
 import pandas as pd
 from sklearn.cluster import KMeans
-from sklearn.preprocessing import StandardScaler
 ```
 
 
@@ -24,13 +23,6 @@ replace_dict = {"Fuldstændig uenig": 1,
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
 ```
 
-
-```python
-with open("scaler.pickle", "rb") as f:
-    scaler = pickle.load(f)
-
-data_scaled = scaler.transform(data)
-```
 
 ```python
 with open("kmeans.pickle", "rb") as f:
