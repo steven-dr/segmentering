@@ -28,14 +28,14 @@ Svarmulighederne på spørgsmålene er:
 
 
 ## Kode
-
+Importerer de nødvendige Python biblioteker:
 ```python
 import pickle
 import pandas as pd
 from sklearn.cluster import KMeans
 ```
 
-
+Indlæser og inspicerer data:
 ```python
 data = pd.read_csv("data.csv")
 head(data)
@@ -48,6 +48,7 @@ head(data)
 |      Nærmest enig |    Nærmest uenig|...|Nærmest uenig |             Uenig|
 |      Nærmest enig |            Uenig|...|        Uenig | Fuldstændig uenig|
 
+I dette datasæt er svarene i tekstformat. Kmeans-modellen kan ikke bruge på tekstdata. Derfor skal teksten i kolonnerne ændres til numerisk:
 
 ```python
 replace_dict = {"Fuldstændig uenig": 1,
@@ -58,9 +59,19 @@ replace_dict = {"Fuldstændig uenig": 1,
                 "Fuldstændig enig": 6}
 
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
+head(data)
 ```
+| Q1| Q2|...| Q9|Q10|
+|---|---|---|---|---|
+| 1 | 6 |...| 3 | 2 |
+| 3 | 5 |...| 3 | 3 |
+| 5 | 3 |...| 2 | 2 |
+| 4 | 3 |...| 3 | 2 |
+| 4 | 2 |...| 2 | 1 |
 
+Data er nu numerisk.
 
+Modellen loades og benyttes på data:
 ```python
 with open("kmeans.pickle", "rb") as f:
     kmeans = pickle.load(f)
@@ -68,6 +79,7 @@ with open("kmeans.pickle", "rb") as f:
 data["segment"] = kmeans.predict(data)
 ```
 
+Segmenterne kommer i første omgang ud som numeriske værdier. Her ændres værdierne til navnene på segmenterne:
 ```python
 replace_dict_segment = {0: "Selvudviklerne",
                         1: "Individualisterne",
