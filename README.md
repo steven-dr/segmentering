@@ -1,17 +1,33 @@
 # Segmentering
 
-Segmenteringsmodellen er baseret på 10 spørgsmål:
+Segmenteringsmodellen er udviklet i Python. Det er derfor nemmest at hente modellen direkte fra dette repository og anvende den direkte.
 
-Q1: Vi burde gøre mere for flygtninge, der kommer til Danmark, end vi gør i dag
-Q2: Den offentlige sektor er for stor
-Q3: Vi betaler for meget i skat i Danmark
-Q4: Vi skal have styr på vores egne problemer, før vi hjælper andre lande
-Q5: Enhver er sin egen lykkes smed
-Q6: Jeg køber altid økologiske eller miljøvenlige produkter, hvis jeg kan
-Q7: Det er vigtigt for mig at have den nyeste teknologi på markedet
-Q8: Jeg kan ikke forestille mig en hverdag uden min smartphone
-Q9: Jeg kommer let til at kede mig, hvis jeg laver de samme ting
-Q10: Jeg vil følge moden
+## Spørgsmål
+Segmenteringsmodellen er baseret på disse ti spørgsmål:
+
+1. Vi burde gøre mere for flygtninge, der kommer til Danmark, end vi gør i dag
+2. Den offentlige sektor er for stor
+3. Vi betaler for meget i skat i Danmark
+4. Vi skal have styr på vores egne problemer, før vi hjælper andre lande
+5. Enhver er sin egen lykkes smed
+6. Jeg køber altid økologiske eller miljøvenlige produkter, hvis jeg kan
+7. Det er vigtigt for mig at have den nyeste teknologi på markedet
+8. Jeg kan ikke forestille mig en hverdag uden min smartphone
+9. Jeg kommer let til at kede mig, hvis jeg laver de samme ting
+10. Jeg vil følge moden
+
+I data skal disse navngives sådan at spørgsmål 1 hedder Q1, spørgsmål 2 hedder Q2 osv.
+
+Svarmulighederne på spørgsmålene er:
+- Fuldstændig uenig
+- Uenig
+- Nærmest uenig
+- Nærmest enig
+- Enig
+- Fuldstændig enig
+
+
+## Kode
 
 ```python
 import pickle
@@ -22,7 +38,16 @@ from sklearn.cluster import KMeans
 
 ```python
 data = pd.read_csv("data.csv")
+head(data)
 ```
+|                Q1 |               Q2|...|            Q9|               Q10|
+|-------------------|-----------------|---|--------------|------------------|
+| Fuldstændig uenig | Fuldstændig enig|...|Nærmest uenig |             Uenig|
+|     Nærmest uenig |             Enig|...|Nærmest uenig |     Nærmest uenig|
+|              Enig |    Nærmest uenig|...|        Uenig |             Uenig|
+|      Nærmest enig |    Nærmest uenig|...|Nærmest uenig |             Uenig|
+|      Nærmest enig |            Uenig|...|        Uenig | Fuldstændig uenig|
+
 
 ```python
 replace_dict = {"Fuldstændig uenig": 1,
