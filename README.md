@@ -28,7 +28,7 @@ data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
 with open("kmeans.pickle", "rb") as f:
     kmeans = pickle.load(f)
 
-data["segment"] = kmeans.predict(data_scaled)
+data["segment"] = kmeans.predict(data)
 ```
 
 ```python
