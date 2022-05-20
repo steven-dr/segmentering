@@ -13,11 +13,12 @@ data = pd.read_csv("data.csv")
 ```
 
 ```python
-replace_dict_segment = {0: "Selvudviklerne",
-                        1: "Individualisterne",
-                        2: "Pragmatikerne",
-                        3: "Idealisterne",
-                        4: "Beskytterne"}
+replace_dict = {"Fuldstændig uenig": 1,
+                "Uenig": 2,
+                "Nærmest uenig": 3,
+                "Nærmest enig": 4,
+                "Enig": 5,
+                "Fuldstændig enig": 6}
 
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
 ```
