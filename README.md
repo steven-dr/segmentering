@@ -38,7 +38,7 @@ from sklearn.cluster import KMeans
 Indlæser og inspicerer data:
 ```python
 data = pd.read_csv("data.csv")
-head(data)
+data.head()
 ```
 |                Q1 |               Q2|...|            Q9|               Q10|
 |-------------------|-----------------|---|--------------|------------------|
@@ -59,7 +59,7 @@ replace_dict = {"Fuldstændig uenig": 1,
                 "Fuldstændig enig": 6}
 
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
-head(data)
+data.head()
 ```
 | Q1| Q2|...| Q9|Q10|
 |---|---|---|---|---|
@@ -88,4 +88,13 @@ replace_dict_segment = {0: "Selvudviklerne",
                         4: "Beskytterne"}
 
 data["segment"] = data["segment"].replace(replace_dict_segment)
+data.head()
 ```
+
+| Q1| Q2|...| Q9|Q10|segment|
+|---|---|---|---|---|-------|
+| 1 | 6 |...| 3 | 2 |Beskytterne|
+| 3 | 5 |...| 3 | 3 |Individualisterne|
+| 5 | 3 |...| 2 | 2 |Pragmatikerne|
+| 4 | 3 |...| 3 | 2 |Pragmatikerne|
+| 4 | 2 |...| 2 | 1 |Idealisterne|
