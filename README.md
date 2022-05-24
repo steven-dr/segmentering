@@ -34,7 +34,7 @@ import pickle
 import pandas as pd
 from sklearn.cluster import KMeans
 ```
-
+### Data
 Indlæser og inspicerer data:
 ```python
 data = pd.read_csv("data.csv")
@@ -71,6 +71,7 @@ data.head()
 
 Data er nu numerisk.
 
+### Model
 Modellen loades og benyttes på data:
 ```python
 with open("kmeans.pickle", "rb") as f:
