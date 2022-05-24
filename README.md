@@ -48,7 +48,7 @@ data.head()
 |      Nærmest enig |    Nærmest uenig|...|Nærmest uenig |             Uenig|
 |      Nærmest enig |            Uenig|...|        Uenig | Fuldstændig uenig|
 
-I dette datasæt er svarene i tekstformat. Kmeans-modellen kan ikke bruge på tekstdata. Derfor skal teksten i kolonnerne ændres til numerisk:
+I dette datasæt er svarene i tekstformat. Kmeans-modellen kan ikke anvendes på tekstdata. Derfor skal teksten i kolonnerne ændres til numeriske værdier:
 
 ```python
 replace_dict = {"Fuldstændig uenig": 1,
@@ -61,13 +61,13 @@ replace_dict = {"Fuldstændig uenig": 1,
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
 data.head()
 ```
-| Q1| Q2|...| Q9|Q10|
-|---|---|---|---|---|
-| 1 | 6 |...| 3 | 2 |
-| 3 | 5 |...| 3 | 3 |
-| 5 | 3 |...| 2 | 2 |
-| 4 | 3 |...| 3 | 2 |
-| 4 | 2 |...| 2 | 1 |
+| Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 |
+|----|----|----|----|----|----|----|----|----|-----|
+| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   |
+| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   |
+| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   |
+| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   |
+| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   |
 
 Data er nu numerisk.
 
@@ -91,10 +91,10 @@ data["segment"] = data["segment"].replace(replace_dict_segment)
 data.head()
 ```
 
-| Q1| Q2|...| Q9|Q10|segment|
-|---|---|---|---|---|-------|
-| 1 | 6 |...| 3 | 2 |Beskytterne|
-| 3 | 5 |...| 3 | 3 |Individualisterne|
-| 5 | 3 |...| 2 | 2 |Pragmatikerne|
-| 4 | 3 |...| 3 | 2 |Pragmatikerne|
-| 4 | 2 |...| 2 | 1 |Idealisterne|
+| Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | segment           |
+|----|----|----|----|----|----|----|----|----|-----|-------------------|
+| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   | Beskytterne       |
+| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   | Individualisterne |
+| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   | Pragmatikerne     |
+| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   | Pragmatikerne     |
+| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   | Idealisterne      |
