@@ -46,11 +46,11 @@ print(data.head())
 ```
 |<sup>id| <sup>Q1</sup> | <sup>Q2</sup> | <sup>Q3</sup>  | <sup>Q4</sup> | <sup>Q5</sup>    | <sup>Q6</sup>     | <sup>Q7</sup>  | <sup>Q8</sup>   | <sup>Q9</sup>   | <sup>Q10</sup>               |
 |---|-------------------|------------------|------------------|------------------|------------------|-------------------|---------------|------------------|---------------|-------------------|
-|<sup>1| <sup><sup>Fuldstændig uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Uenig</sup></sup>            | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>      | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Uenig</sup></sup>             |
-|<sup>2| <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Enig</sup></sup>             | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Enig</sup></sup>              | <sup><sup>Enig</sup></sup>            | <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup>     |
-|<sup>3| <sup><sup>Enig              | <sup><sup>Nærmest uenig    | <sup><sup>Enig             | <sup><sup>Nærmest enig     | <sup><sup>Enig             | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Uenig             |
-|<sup>4| <sup><sup>Nærmest enig      | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest enig     | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Uenig            | <sup><sup>Nærmest uenig | <sup><sup>Uenig             |
-|<sup>5| <sup><sup>Nærmest enig      | <sup><sup>Uenig            | <sup><sup>Uenig            | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig     | <sup><sup>Nærmest uenig | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Fuldstændig uenig |
+|<sup>0| <sup><sup>Fuldstændig uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Uenig</sup></sup>            | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>      | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Uenig</sup></sup>             |
+|<sup>1| <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Enig</sup></sup>             | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Enig</sup></sup>              | <sup><sup>Enig</sup></sup>            | <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup>     |
+|<sup>2| <sup><sup>Enig              | <sup><sup>Nærmest uenig    | <sup><sup>Enig             | <sup><sup>Nærmest enig     | <sup><sup>Enig             | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Uenig             |
+|<sup>3| <sup><sup>Nærmest enig      | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest enig     | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Uenig            | <sup><sup>Nærmest uenig | <sup><sup>Uenig             |
+|<sup>4| <sup><sup>Nærmest enig      | <sup><sup>Uenig            | <sup><sup>Uenig            | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig     | <sup><sup>Nærmest uenig | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Fuldstændig uenig |
 |...| ...| ...| ...| ...| ...| ...| ...| ...| ...| ...|
  
 <sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
@@ -70,11 +70,11 @@ print(data.head())
 ```
 |id| Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 |
 |---|----|----|----|----|----|----|----|----|----|-----|
-|1| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   |
-|2| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   |
-|3| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   |
-|4| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   |
-|5| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   |
+|0| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   |
+|1| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   |
+|2| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   |
+|3| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   |
+|4| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   |
 |...| ...| ...| ...| ...| ...| ...| ...| ...| ...| ... |
 
 <sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
@@ -104,11 +104,11 @@ print(data.head())
 
 |id| Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | segment           |
 |---|----|----|----|----|----|----|----|----|----|-----|-------------------|
-|1| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   | Beskytterne       |
-|2| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   | Individualisterne |
-|3| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   | Pragmatikerne     |
-|4| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   | Pragmatikerne     |
-|5| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   | Idealisterne      |
+|0| 1  | 6  | 2  | 6  | 6  | 4  | 3  | 4  | 3  | 2   | Beskytterne       |
+|1| 3  | 5  | 6  | 5  | 5  | 3  | 3  | 6  | 3  | 3   | Individualisterne |
+|2| 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   | Pragmatikerne     |
+|3| 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   | Pragmatikerne     |
+|4| 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   | Idealisterne      |
 |...| ...| ...| ...| ...| ...| ...| ...| ...| ...| ... | ...               |
 
 <sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
