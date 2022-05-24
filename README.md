@@ -19,12 +19,12 @@ Segmenteringsmodellen er baseret på disse ti spørgsmål:
 I data skal disse navngives sådan at spørgsmål 1 hedder Q1, spørgsmål 2 hedder Q2 osv.
 
 Svarmulighederne på spørgsmålene er:
-- Fuldstændig uenig
-- Uenig
-- Nærmest uenig
-- Nærmest enig
-- Enig
-- Fuldstændig enig
+1. Fuldstændig uenig
+2. Uenig
+3. Nærmest uenig
+4. Nærmest enig
+5. Enig
+6. Fuldstændig enig
 
 
 ## Kode
