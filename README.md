@@ -1,6 +1,6 @@
 # Segmentering
 
-Segmenteringsmodellen er udviklet i Python. Det er derfor nemmest at hente modellen direkte fra dette repository og anvende den direkte.
+Segmenteringsmodellen er udviklet i Python. Modellen kan hentes direkte fra dette repository. Herunder er et Python eksempel, hvor modellen anvendt på et mindre datasæt.
 
 ## Spørgsmål
 Segmenteringsmodellen er baseret på disse ti spørgsmål:
