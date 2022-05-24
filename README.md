@@ -51,7 +51,7 @@ print(data.head())
 | <sup><sup>Enig              | <sup><sup>Nærmest uenig    | <sup><sup>Enig             | <sup><sup>Nærmest enig     | <sup><sup>Enig             | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Uenig             |
 | <sup><sup>Nærmest enig      | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest enig     | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Uenig            | <sup><sup>Nærmest uenig | <sup><sup>Uenig             |
 | <sup><sup>Nærmest enig      | <sup><sup>Uenig            | <sup><sup>Uenig            | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig     | <sup><sup>Nærmest uenig | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Fuldstændig uenig |
-| ...| ...| ...| ...| ...| ...| ...| ...| ...|
+| ...| ...| ...| ...| ...| ...| ...| ...| ...| ...|
  
 <sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
 
