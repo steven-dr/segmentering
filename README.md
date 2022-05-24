@@ -1,6 +1,10 @@
 # Segmentering
 
-Segmenteringsmodellen er udviklet i Python. Modellen kan hentes direkte fra dette repository. Herunder er et Python eksempel, hvor modellen anvendt på et mindre datasæt.
+Segmenteringsmodellen er udviklet i Python med sklearn (version 1.0). Modellen kan hentes direkte fra dette repository. Herunder er et Python eksempel, hvor modellen anvendt på et mindre datasæt.
+
+Dokumentation:
+ - sklearn https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+ - kmeans https://en.wikipedia.org/wiki/K-means_clustering
 
 ## Spørgsmål
 Segmenteringsmodellen er baseret på disse ti spørgsmål:
@@ -38,15 +42,18 @@ from sklearn.cluster import KMeans
 Indlæser og inspicerer data:
 ```python
 data = pd.read_csv("data.csv")
-data.head()
+print(data.head())
 ```
-|                Q1 |               Q2|...|            Q9|               Q10|
-|-------------------|-----------------|---|--------------|------------------|
-| Fuldstændig uenig | Fuldstændig enig|...|Nærmest uenig |             Uenig|
-|     Nærmest uenig |             Enig|...|Nærmest uenig |     Nærmest uenig|
-|              Enig |    Nærmest uenig|...|        Uenig |             Uenig|
-|      Nærmest enig |    Nærmest uenig|...|Nærmest uenig |             Uenig|
-|      Nærmest enig |            Uenig|...|        Uenig | Fuldstændig uenig|
+| <sup>Q1</sup> | <sup>Q2</sup> | <sup>Q3</sup>  | <sup>Q4</sup> | <sup>Q5</sup>    | <sup>Q6</sup>     | <sup>Q7</sup>  | <sup>Q8</sup>   | <sup>Q9</sup>   | <sup>Q10</sup>               |
+|-------------------|------------------|------------------|------------------|------------------|-------------------|---------------|------------------|---------------|-------------------|
+| <sup><sup>Fuldstændig uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Uenig</sup></sup>            | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>      | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest enig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Uenig</sup></sup>             |
+| <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Enig</sup></sup>             | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Enig</sup></sup>             | <sup><sup>Enig</sup></sup>            | <sup><sup>Nærmest uenig</sup></sup>     | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Fuldstændig enig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup> | <sup><sup>Nærmest uenig</sup></sup>     |
+| <sup><sup>Enig              | <sup><sup>Nærmest uenig    | <sup><sup>Enig             | <sup><sup>Nærmest enig     | <sup><sup>Enig             | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Uenig             |
+| <sup><sup>Nærmest enig      | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest enig     | <sup><sup>Fuldstændig uenig | <sup><sup>Uenig         | <sup><sup>Uenig            | <sup><sup>Nærmest uenig | <sup><sup>Uenig             |
+| <sup><sup>Nærmest enig      | <sup><sup>Uenig            | <sup><sup>Uenig            | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig    | <sup><sup>Nærmest uenig     | <sup><sup>Nærmest uenig | <sup><sup>Nærmest enig     | <sup><sup>Uenig         | <sup><sup>Fuldstændig uenig |
+| ...| ...| ...| ...| ...| ...| ...| ...| ...|
+ 
+<sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
 
 I dette datasæt er svarene i tekstformat. Kmeans-modellen kan ikke anvendes på tekstdata. Derfor skal teksten i kolonnerne ændres til numeriske værdier:
 
@@ -59,7 +66,7 @@ replace_dict = {"Fuldstændig uenig": 1,
                 "Fuldstændig enig": 6}
 
 data.iloc[:,:] = data.iloc[:,:].replace(replace_dict)
-data.head()
+print(data.head())
 ```
 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 |
 |----|----|----|----|----|----|----|----|----|-----|
@@ -68,6 +75,9 @@ data.head()
 | 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   |
 | 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   |
 | 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   |
+| ...| ...| ...| ...| ...| ...| ...| ...| ...| ... |
+
+<sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
 
 Data er nu numerisk.
 
@@ -89,7 +99,7 @@ replace_dict_segment = {0: "Selvudviklerne",
                         4: "Beskytterne"}
 
 data["segment"] = data["segment"].replace(replace_dict_segment)
-data.head()
+print(data.head())
 ```
 
 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | segment           |
@@ -99,3 +109,9 @@ data.head()
 | 5  | 3  | 5  | 4  | 5  | 1  | 2  | 4  | 2  | 2   | Pragmatikerne     |
 | 4  | 3  | 3  | 3  | 4  | 1  | 2  | 2  | 3  | 2   | Pragmatikerne     |
 | 4  | 2  | 2  | 3  | 3  | 3  | 3  | 4  | 2  | 1   | Idealisterne      |
+| ...| ...| ...| ...| ...| ...| ...| ...| ...| ... | ...               |
+
+<sup>Denne tabel indeholder de fem første observationer af 'data'</sup>
+
+I ovenstående tabel er resultatet af segmenteringsmodellen på de fem første observationer tilføjet i kolonnen 'segment'
+
