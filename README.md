@@ -22,11 +22,6 @@ Segmenteringsmodellen er baseret på disse ti spørgsmål:
 
 I data skal disse navngives sådan at spørgsmål 1 hedder Q1, spørgsmål 2 hedder Q2 osv.
 
-Vi anbefaler, at man ikke giver responder muligheden for at svare 'Ved ikke'. Hvis man - mod vores anbefaling - vælger at give dem muligeden, så kan man håndtere det på følgende måde:
-
-- Aktivt tage stilling til, hvor mange spørgsmål en respondent må have svaret 'Ved ikke' på, før de bliver sorteret fra.
-- Erstatte 'Ved ikke' svar med gennemsnittet af, hvad de resterende respondenter har svaret. 
-
 Svarmulighederne på spørgsmålene er:
 1. Fuldstændig uenig
 2. Uenig
@@ -35,6 +30,10 @@ Svarmulighederne på spørgsmålene er:
 5. Enig
 6. Fuldstændig enig
 
+Vi anbefaler, at man ikke giver responder muligheden for at svare 'Ved ikke'. Hvis man - mod vores anbefaling - vælger at give dem muligeden, så kan man håndtere det på følgende måde:
+
+- Aktivt tage stilling til, hvor mange spørgsmål en respondent må have svaret 'Ved ikke' på, før de bliver sorteret fra.
+- Erstatte 'Ved ikke' svar med gennemsnittet af, hvad de resterende respondenter har svaret. 
 
 ## Kode
 Importerer de nødvendige Python biblioteker:
